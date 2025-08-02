@@ -9,8 +9,7 @@ An interactive web app that displays Avengers superheroes with their details and
 ## Tech Stack
 - HTML
 - CSS
-- JavaScript
-
+  
 ## How to Run
 1. Clone this repo
 2. Open index.html in your browser
