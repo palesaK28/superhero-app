@@ -1,28 +1,40 @@
 <!DOCTYPE html>
-<html></html>
-<head> 
-   
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Avengers</title>    
-    
+    <title>Welcome to Avengers App</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div id="menu">
-    
-            <a href="home.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+        <img src="images/Avengers-logo.png.jpg" alt="Avengers Logo" class="splash-logo">
+        <p class="loading-text">Assembling heroes...</p>
     </div>
-    <div class="Gallery">
-        <a href="avenger-1.html"><img src="images/avengers_01.jpg" ></a>
-        <a href="avenger-2.html"><img src="images/avengers_02.jpg" ></a>
-        <a href="avenger-3.html"><img src="images/avengers_03.jpg" ></a>
-        <a href="avenger-4.html"><img src="images/avengers_04.jpg" ></a>
-        <a href="avenger-5.html"><img src="images/avengers_05.jpg" ></a>
-        <a href="avenger-6.html"><img src="images/avengers_06.jpg" ></a>
+
+    <!-- Main Welcome Page -->
+    <div class="overlay" id="main-content" style="display:none;">
+        <div class="welcome-container">
+            <img src="images/Avengers-logo2.png.jpg" alt="Avengers Logo" class="logo">
+            <h1 class="fade-in">Welcome to the Avengers App</h1>
+            <p class="fade-in-delay">Join Earth's Mightiest Heroes and explore your favorite Avengers!</p>
+            <button class="fade-in-button" onclick="enterApp()">Enter App</button>
         </div>
-        </body> 
-        
-        </html>
+    </div>
+
+    <script>
+        // Show splash screen first, then welcome page
+        window.onload = function() {
+            setTimeout(() => {
+ document.getElementById("splash-screen").style.display = "none";
+                document.getElementById("main-content").style.display = "flex";
+            }, 2000); // 2 seconds splash screen
+        };
+
+        function enterApp() {
+            window.location.href = "app.html"; // Go to the main app
+        }
+    </script>
+</body>
+</html>
